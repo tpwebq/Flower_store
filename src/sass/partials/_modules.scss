@@ -1,13 +1,34 @@
 @include aoa-bg-series($img__classes,$img__aoa,0,"center","cover","scroll");
 
+.navbar{
+    &-logo{
+        height: $logo__height;
+    }
+}
 .privacy{
     &-s1{
         background-position-x: right!important;
     }
 }
-
 .text{
     &-shadow{
         text-shadow: $text__shadow;
+    }
+}
+header{
+    z-index: 10;
+}
+textarea{
+    resize: none;
+}
+@media all and (max-width:767px){
+    .navbar{
+        &-nav{
+            backdrop-filter: blur(5px); 
+            background-color: #fff;
+            border: 1px solid #999;
+            opacity: 0.9;
+            padding: 10px;
+        }
     }
 }
